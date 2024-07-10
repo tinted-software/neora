@@ -1,0 +1,4 @@
+#+title: Neora Desktop Environment
+
+A neon desktop environment inspired by Windows Aero and macOS.
+
