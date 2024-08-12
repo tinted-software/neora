@@ -1,0 +1,10 @@
+[package]
+name = "neora-scanner"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "A crate to scan wayland.xml and get some meta information."
+
+[dependencies]
+quick-xml = { version = "0.36.1", features = ["serialize"] }
+serde = { version = "1.0.206", features = ["derive"] }

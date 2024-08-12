@@ -1,0 +1,18 @@
+[package]
+name = "neora-compositor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tracing = { git = "https://github.com/tokio-rs/tracing" }
+tracing-subscriber = { git = "https://github.com/tokio-rs/tracing", features = ["json", "env-filter"] }
+anyhow = "1.0.86"
+raw-window-handle = "0.6.2"
+wgpu-hal = { git = "https://github.com/gfx-rs/wgpu", features = ["vulkan"] }
+wgpu-types = { git = "https://github.com/gfx-rs/wgpu", features = [] }
+neora-protocol = { path = "../neora-protocol" }
+tracing-error = { git = "https://github.com/tokio-rs/tracing" }
+
+[target.'cfg(target_family = "unix")'.dependencies]
+nix = { version = "0.29.0", features = ["socket", "uio", "net", "mman", "fs"] }
+
